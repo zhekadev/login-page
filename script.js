@@ -77,7 +77,7 @@ const translations = {
 };
 
 let currentLang = 'en';
-
+//fixme
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize theme
     initTheme();
