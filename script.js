@@ -77,7 +77,7 @@ const translations = {
 };
 
 let currentLang = 'en';
-//fixme
+//fixme decrease cognitive complexity of the callback below 
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize theme
     initTheme();
