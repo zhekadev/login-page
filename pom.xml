@@ -44,7 +44,7 @@
                         </goals>
                         <configuration>
                             <destFile>${project.build.directory}/jacoco-output/unit-tests.exec</destFile>
-                            <propertyName>surefireJacocoArgs</propertyName>
+                            <propertyName>surefireJacocoArgs</propertyName> 
                         </configuration>
                     </execution>
                     <execution>
