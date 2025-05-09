@@ -1,1 +1,94 @@
-a
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Log in</title>
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <div class="controls">
+        <div class="language-selector">
+            <button type="button" data-lang="en" class="lang-btn active">EN</button>
+            <button type="button" data-lang="es" class="lang-btn">ES</button>
+            <button type="button" data-lang="ru" class="lang-btn">RU</button>
+        </div>
+        <button type="button" class="theme-toggle" aria-label="Toggle theme">
+            <svg class="theme-icon" viewBox="0 0 24 24" width="24" height="24">
+                <path class="sun-icon" d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0 .39-.39.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/>
+                <path class="moon-icon" d="M12.43 2.3c-2.38-.59-4.68-.27-6.63.64-3.26 1.51-5.36 4.9-5.36 8.75 0 5.25 4.25 9.5 9.5 9.5 3.85 0 7.24-2.1 8.75-5.36.91-1.95 1.23-4.25.64-6.63-.59-2.38-2.12-4.41-4.18-5.43-2.06-1.02-4.38-.95-6.72.5z"/>
+            </svg>
+        </button>
+    </div>
+
+    <main id="main-content">
+        <div class="login-container">
+            <h1 data-translate="welcome">Welcome Back</h1>
+            <form id="login-form" novalidate>
+                <div class="input-group">
+                    <label for="email" data-translate="email">Email</label>
+                    <input type="email" id="email" name="email" required 
+                        data-translate="email_placeholder" 
+                        placeholder="Enter your email" 
+                        autocomplete="email" 
+                        inputmode="email" 
+                        autocapitalize="none" 
+                        autocorrect="off"
+                        aria-describedby="email-error">
+                </div>
+                <div class="input-group">
+                    <label for="password" data-translate="password">Password</label>
+                    <input type="password" id="password" name="password" required 
+                        data-translate="password_placeholder" 
+                        placeholder="Enter your password"
+                        autocomplete="current-password" 
+                        autocapitalize="none" 
+                        autocorrect="off"
+                        aria-describedby="password-error password-strength-text">
+                    <button type="button" class="toggle-password" aria-label="Toggle password visibility">
+                        <svg class="eye-icon" viewBox="0 0 24 24" width="24" height="24">
+                            <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+                        </svg>
+                    </button>
+                    <div class="password-strength">
+                        <div class="password-strength-bar"></div>
+                    </div>
+                    <div id="password-strength-text" class="visually-hidden" aria-live="polite"></div>
+                </div>
+                <div class="form-footer">
+                    <label class="remember-me">
+                        <input type="checkbox" id="remember" name="remember">
+                        <span data-translate="remember_me">Remember me</span>
+                    </label>
+                    <a href="#" class="forgot-password" data-translate="forgot_password">Forgot password?</a>
+                </div>
+                <button id="submit-btn" type="submit" data-translate="login">Log In</button>
+            </form>
+
+            <div class="social-login">
+                <p data-translate="or_continue_with">Or continue with</p>
+                <div class="social-buttons">
+                    <button type="button" class="social-btn" aria-label="Continue with Google">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%234285F4' d='M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z'/%3E%3Cpath fill='%2334A853' d='M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z'/%3E%3Cpath fill='%23FBBC05' d='M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z'/%3E%3Cpath fill='%23EA4335' d='M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z'/%3E%3C/svg%3E" alt="Google logo">
+                    </button>
+                    <button type="button" class="social-btn" aria-label="Continue with GitHub">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23181717' d='M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z'/%3E%3C/svg%3E" alt="GitHub logo">
+                    </button>
+                </div>
+            </div>
+
+            <div class="signup-link">
+                <span data-translate="no_account">Don't have an account?</span>
+                <a href="#" data-translate="sign_up">Sign up</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
